@@ -17,7 +17,7 @@ const {
   deletePhoto,
   deleteAlbum,
   RemoveFavPhoto,
-  getAllPhotos
+  getAllPhotos,
 } = require("./routes");
 app.use(cors());
 app.use(express.json());
@@ -41,11 +41,11 @@ app.use("/deleteAlbum", deleteAlbum);
 app.use("/RemoveFavPhoto", RemoveFavPhoto);
 app.use("/getAllPhotos", getAllPhotos);
 
-
-
-
-
 app.use("*", notFound);
 app.use(errorHandling);
+const port = "4000";
 
+app.listen(port, () => {
+  console.log("server running on", port);
+});
 module.exports = app;

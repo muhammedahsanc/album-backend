@@ -30,4 +30,5 @@ const googleLogin = async (req, res, next) => {
         next(error)
     }
 }
+
 module.exports = [googleLogin];
