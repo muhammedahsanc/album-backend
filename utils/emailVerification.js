@@ -29,7 +29,7 @@ module.exports = async(email) =>{
                       please click the button below to verify your email address.
                     </p>
               
-                    <a href="https://main--stellular-twilight-ebcd7d.netlify.app/verify-user?email=${email}" style="display: inline-block; padding: 20px; background-color: #e8491d; color: #fff; text-decoration: none; border-radius: 5px; font-size: 18px;">Verify Email</a>
+                    <a href="http://localhost:5173/verify-user?email=${email}" style="display: inline-block; padding: 20px; background-color: #e8491d; color: #fff; text-decoration: none; border-radius: 5px; font-size: 18px;">Verify Email</a>
               
                   </div>
               
@@ -40,4 +40,4 @@ module.exports = async(email) =>{
             console.error("Error sending email:", error);
         }
     }
-   
+    // https://main--stellular-twilight-ebcd7d.netlify.app
