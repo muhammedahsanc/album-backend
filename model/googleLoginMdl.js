@@ -1,13 +1,10 @@
 const { miniSchema } = require("../schemas");
 
-const googleLoginMdl = async ({ username,password}) => {
+const googleLoginMdl = async ({ username,password,status}) => {
     console.log("heeeeeeeeeeeeeeeeeeeeeyyyyy",username,password);
     try{
-        const user = await miniSchema.create({username,password})
+        const user = await miniSchema.create({username,password,status})
         return user ? user : false;
-
-
-
     }catch(error){
         console.error(error)
         return error
@@ -17,7 +14,7 @@ const  checkUserName = async ({username})=>{
     console.log(username,"dbbbbbbbbbbbbtestttttttt");
     try{
         const user = await miniSchema.findOne({username})
-        return user ? user.username : null;
+        return user ? user: null;
     }catch(error){
         console.error(error);
         return error;
